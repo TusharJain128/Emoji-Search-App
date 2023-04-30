@@ -22,7 +22,7 @@ export default function App() {
     }
 
   return (
-    <div>
+    <div align="center">
       <h1>Emoji Search App</h1>
       <input
         type="text"
@@ -33,7 +33,7 @@ export default function App() {
       <div>
         {sortedList.map((emoji) => (
           <div key={Math.random()}>
-            <span>{emoji.symbol}</span> {emoji.title}
+            <span >{emoji.symbol}</span> {emoji.title}
           </div>
         ))}
       </div>
