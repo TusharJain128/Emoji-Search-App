@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import EmojiList from './EmojiList.json';
+import './app.css'
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -22,7 +23,8 @@ export default function App() {
     }
 
   return (
-    <div align="center">
+    <div className='Dashboard'>
+      <div>
       <h1>Emoji Search App</h1>
       <input
         type="text"
@@ -30,7 +32,6 @@ export default function App() {
         value={searchQuery}
         onChange={handleSearch}
       />
-      <div>
         {sortedList.map((emoji) => (
           <div key={Math.random()}>
             <span >{emoji.symbol}</span> {emoji.title}
